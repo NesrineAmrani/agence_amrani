@@ -46,7 +46,7 @@
             <form class="pt-1 " action="{{route('lc.destroy', $lc->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="destroy_lc w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                <button class="destroy_lc w-4 mr-2 transform hover:text-red-500 hover:scale-110">
                     @include('amrani.pages.lc.partials.btn-delete')
                 </button>
             </form>

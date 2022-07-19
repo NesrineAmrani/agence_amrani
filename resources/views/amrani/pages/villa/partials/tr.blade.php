@@ -31,7 +31,7 @@
 
     <td class="py-1 px-6 text-center">
         <div class="font-bold">
-            {{$villa->nbr_etages}}
+            {{$villa->villa_surface_total}}
         </div>
     </td>
 
@@ -46,7 +46,7 @@
             <form class="pt-1 " action="{{route('villa.destroy', $villa->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="destroy_villa w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                <button class="destroy_villa w-4 mr-2 transform hover:text-red-500 hover:scale-110">
                     @include('amrani.pages.villa.partials.btn-delete')
                 </button>
             </form>

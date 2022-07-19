@@ -40,10 +40,10 @@ class LocalCommercial extends Model
     ];
     public const ETATS = ['Nouveau', 'Déjà Utilisé'];
     public const PROJETS = ['Café', 'Restaurant', 'Club Sportif', 'Coiffure', 'Commerce', 'Vente de Vêtements', 'Autre'];
-    public const FACADES = ['Rue', 'Kisaria', 'Place', 'Souk'];
-    public const SITUATIONS = ['Titre', 'Milikia', 'Contrat', 'Miftah', 'Contrat Adlia'];
+    public const FACADES = ['Rue', 'Centre Commercial', 'Place', 'Marché'];
+    public const SITUATIONS = ['Titré', 'Melkia', 'Contrat', 'Miftah', 'Contrat Judiciaire'];
     public const LOCALISATIONS = ['Immeuble', 'Maison', 'Indépendant'];
-    public const DETAILS = ['Soudda', 'Sous Sol', 'Toilette', 'Eau', 'Electricité', 'Pateo'];
+    public const DETAILS = ['Mezzanine', 'Sous Sol', 'Toilette', 'Eau', 'Electricité', 'Patio'];
 
     public function client(){
         return $this->belongsTo(Client::class);

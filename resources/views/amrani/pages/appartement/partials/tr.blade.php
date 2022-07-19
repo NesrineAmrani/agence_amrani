@@ -28,21 +28,13 @@
            </span>
         </div>
     </td>
-    <td class="py-1 px-6 text-center">
-        <div class="font-bold">
-            <span class="font-medium">{{$appartement->appartement_etage}}</span>
-        </div>
-    </td>
+    
     <td class="py-1 px-6 text-center">
         <div class="font-bold">
             {{$appartement->surface}}
         </div>
     </td>
-    <td class="py-1 px-6 text-center">
-        <div class="font-bold">
-            {{$appartement->nbr_chambre}}
-        </div>
-    </td>
+    
     <td class="py-1 px-6 text-right text-pink-700 font-bold">
         @money($appartement->prix_total) <span style="font-size: 8px" class="font-light">MAD</span>
     </td>
@@ -54,7 +46,7 @@
             <form class="pt-1 " action="{{route('appartement.destroy', $appartement->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="destroy_appartement w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                <button class="destroy_appartement w-4 mr-2 transform hover:text-red-500 hover:scale-110">
                     @include('amrani.pages.appartement.partials.btn-delete')
                 </button>
             </form>

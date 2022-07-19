@@ -28,11 +28,13 @@
                             echo isset($log->subject->terrain_code)?$log->subject->terrain_code . " (" . $log->subject->service->terrain_service . ")": 'Error!';
                             break;
                         case 'App\Models\Villa':
-                        echo $log->changes;
+                            //echo $log->changes;
                             echo isset($log->subject->villa_code)?$log->subject->villa_code . " (" . $log->subject->service->villa_service . ")": 'Error!';
                             break;
                         case 'App\Models\Intermediaire':
-                            echo $log->changes;
+                            //echo $log->changes;
+                            //this echo below has been added
+                            echo isset($log->subject->intermediaire_name)?'Intermediaire : ' . $log->subject->intermediaire_name: 'Error!';
                             break;
                         default:
                             echo $log->subject_type;

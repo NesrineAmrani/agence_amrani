@@ -5,16 +5,16 @@
             <div class="flex items-center justify-between pt-6 gap-4">
                 <div class="flex items-center gap-1 lg:gap-4">
                     <div class="rounded-lg border border-gray-300 overflow-hidden relative p-0">
-                        <input id="req" type="text" class="input-form border-0 text-xs w-32 m-0 h-auto" placeholder="Chercher">
+                        <input id="req" type="text" class="input-form border-0 text-xs w-40 m-0 h-auto" placeholder="Chercher">
                         <button id="req_submit" class="absolute top-0 right-0 m-2 text-sm text-gray-400"><i class="fas fa-search"></i></button>
                     </div>
-                    <select class="form-input w-32" id="lc_service_id">
+                    <select class="form-input w-48" id="lc_service_id">
                         <option value="-1">Services</option>
                         @foreach ($services as $service)
                         <option value="{{$service->id}}">{{$service->lc_service}}</option>
                         @endforeach
                     </select>
-                    <select class="form-input w-32" id="lc_situation">
+                    <select class="form-input w-44" id="lc_situation">
                         <option value="-1">-- Situation</option>
                         @foreach ($situations as $situation)
                         <option value="{{$situation}}">{{$situation}}</option>
@@ -37,7 +37,7 @@
                             <th class="py-3 px-6 text-left cursor-pointer">Ville</th>
                             <th class="py-3 px-6 text-center cursor-pointer">Surface</th>
                             <th class="py-3 px-6 text-right cursor-pointer">Prix</th>
-                            <th class="py-3 px-2 text-center"></th>
+                            <th class="py-3 px-2 text-center">ACTIONS</th>
                         </tr>
                     </thead>
                     <tbody class="text-gray-600 text-sm font-light">

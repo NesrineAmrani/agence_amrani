@@ -35,7 +35,7 @@ class AppartementController extends Controller
             'services'              =>  AppartementService::all(),
             'cities'                =>  City::all(),
             'facades'               =>  Appartement::FACADES,
-            'etats'                 =>  ['Nouveau', 'Habite'],
+            'etats'                 =>  ['Nouveau', 'Déjà Utilisé'],
             'types'                 =>  ['Appartement', 'Duplexe', 'Triplexe'],
             'situations'            =>  Appartement::SITUATIONS,
             'code_appartement'      =>  $lastID
@@ -117,8 +117,8 @@ class AppartementController extends Controller
             'services'              =>  AppartementService::all(),
             'cities'                =>  City::all(),
             'facades'               =>  Appartement::FACADES,
-            'etats'                 =>  ['Nouveau', 'Habite'],
-            'types'                 =>  ['Appartement', 'Duplexe'],
+            'etats'                 =>  ['Nouveau', 'Déjà Utilisé'],
+            'types'                 =>  ['Appartement', 'Duplexe', 'Triplexe'],
             'situations'            =>  Appartement::SITUATIONS,
             'appartement'        =>  $appartement
         ]);

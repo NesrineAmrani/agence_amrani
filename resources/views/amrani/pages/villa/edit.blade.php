@@ -54,9 +54,9 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_etat">Etat</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_etat">État</label>
                         <select class="form-input w-3/5" name="villa_etat">
-                            <option value="-1">-- Etats --</option> 
+                            <option value="-1">-- États --</option> 
                             @foreach ($etats as $etat)
                                 <option @if($etat == $villa->villa_etat) selected @endif value="{{$etat}}">{{$etat}}</option>    
                             @endforeach
@@ -98,9 +98,9 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_facade">Facades</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_facade">Façades</label>
                         <select class="facade form-input w-3/5" name="villa_facade">
-                            <option value="-1">-- Facade --</option> 
+                            <option value="-1">-- Façade --</option> 
                             @foreach ($facades as $facade)
                                 <option @if($facade == $villa->villa_facade) selected @endif value="{{$facade}}">{{$facade}}</option>    
                             @endforeach
@@ -115,17 +115,17 @@
 
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_surface_total">Surface Total</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_surface_total">Surface Totale</label>
                         <input value="{{$villa->villa_surface_total}}" placeholder="0" class="form-input" type="text" name="villa_surface_total">
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_surface_batie">Surface Batie</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="villa_surface_batie">Surface Bâtie</label>
                         <input value="{{$villa->villa_surface_batie}}" placeholder="0" class="form-input" type="text" name="villa_surface_batie">
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="nbr_garage">Nbr Garage</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="nbr_garage">Nbr Garages</label>
                         <input value="{{$villa->nbr_garage}}" placeholder="0" class="form-input" type="text" name="nbr_garage">
                     </div>
 
@@ -135,7 +135,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="surface_patio">Surface Pateo</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="surface_patio">Surface Patio</label>
                         <input value="{{$villa->surface_patio}}" placeholder="0" class="form-input" type="text" name="surface_patio">
                     </div>
 
@@ -157,7 +157,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Declare</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Déclaré</label>
                         <input value="{{$villa->prix_declaration}}"placeholder="0" class="form-input bg-blue-50" type="number" name="prix_declaration">
                         <span class="text-xs text-gray-500">DH</span>
                     </div>

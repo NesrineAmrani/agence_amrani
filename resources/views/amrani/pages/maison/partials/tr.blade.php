@@ -46,7 +46,7 @@
             <form class="pt-1 " action="{{route('maison.destroy', $maison->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="destroy_maison w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                <button class="destroy_maison w-4 mr-2 transform hover:text-red-500 hover:scale-110">
                     @include('amrani.pages.maison.partials.btn-delete')
                 </button>
             </form>

@@ -15,17 +15,17 @@
                         @csrf
                         @method('PUT')
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_code">Code intermediaire</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_code">Code intermédiaire</label>
                             <input readonly value="{{$intermediaire->intermediaire_code}}" class="form-input bg-green-100 font-bold" type="text" id="intermediaire_code" name="intermediaire_code" required>
                         </div>
                         
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_name">Nom intermediaire</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_name">Nom intermédiaire</label>
                             <input value="{{$intermediaire->intermediaire_name}}" class="form-input w-3/5" type="text" id="intermediaire_name" name="intermediaire_name" required>
                         </div>
 
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_category_id">Category</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_category_id">Catégorie</label>
                             <select class="form-input w-3/5" id="intermediaire_category_id" name="intermediaire_category_id" required>
                             @foreach ($categories as $category)
                                 <option value="{{$category->id}}" @if ($category->id == $intermediaire->intermediaire_category_id) selected @endif>{{$category->intermediaire_category}}</option>
@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_status_id">Status du intermediaire</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_status_id">Statut</label>
                             <select class="form-input w-3/5" id="intermediaire_status_id" name="intermediaire_status_id" required>
                             @foreach ($statuses as $status)
                                 <option value="{{$status->id}}" @if ($status->id == $intermediaire->intermediaire_status_id) selected @endif>{{$status->intermediaire_status}}</option>
@@ -67,8 +67,8 @@
                                     @endforeach
                                 @endisset
                                 <div class="flex gap-1 lg:gap-4 mb-4">
-                                    <input value="" class="form-input flex-1" type="text" name="client_contact_name[]">
-                                    <input value="" class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                                    <input value="" class="form-input flex-1" type="text"  placeholder="Nom" name="client_contact_name[]">
+                                    <input value="" class="form-input flex-1" type="text"  placeholder="Téléphone" name="client_contact_telephone[]">
                                     <div class=" w-12 ">
                                         <button class="add_contact w-full px-1 rounded border py-2 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                                     </div>                                        
@@ -95,8 +95,8 @@
                 $(this).remove();
                 var content = `
                 <div class="flex gap-1 lg:gap-4 mb-4">
-                    <input class="form-input flex-1" type="text" name="client_contact_name[]">
-                    <input class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                    <input class="form-input flex-1" type="text" placeholder="Nom" name="client_contact_name[]">
+                    <input class="form-input flex-1" type="text" placeholder="Téléphone" name="client_contact_telephone[]">
                     <div class=" w-12 ">
                         <button class="add_contact w-full py-2 rounded border px-1 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                     </div>

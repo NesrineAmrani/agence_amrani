@@ -22,11 +22,11 @@
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
                             <th class="py-3 px-6 text-left cursor-pointer">#CODE</th>
-                            <th class="py-3 px-6 text-left cursor-pointer">Intermediaire</th>
-                            <th class="py-3 px-6 text-left cursor-pointer">Categorie</th>
-                            <th class="py-3 px-6 text-left cursor-pointer">Tele.</th>
+                            <th class="py-3 px-6 text-left cursor-pointer">Intermédiaire</th>
+                            <th class="py-3 px-6 text-left cursor-pointer">Catégorie</th>
+                            <th class="py-3 px-6 text-left cursor-pointer">Télé.</th>
                             <th class="py-3 px-6 text-left cursor-pointer">Ville</th>
-                            <th class="py-3 px-6 text-center cursor-pointer">Status</th>
+                            <th class="py-3 px-6 text-center cursor-pointer">Statut</th>
                             <th class="py-3 px-6 text-center">Actions</th>
                         </tr>
                     </thead>

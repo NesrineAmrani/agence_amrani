@@ -42,9 +42,9 @@ class Ferma extends Model
         'updated_at'
     ];
     public const ETATS = ['Nouveau', 'Déjà Utilisé'];
-    public const FACADES = ['Rue', 'Derb', 'Place', 'Piscine', 'Mer'];
-    public const SITUATIONS = ['Titre', 'Milikia', 'Contrat', 'Miftah', 'Contrat Adlia'];
-    public const DETAILS = ['Piscine', 'Eau', 'Electricite', 'Puit'];
+    public const FACADES = ['Rue', 'Place', 'Piscine'];
+    public const SITUATIONS = ['Titré', 'Melkia', 'Contrat', 'Contrat Judiciaire'];
+    public const DETAILS = ['Piscine', 'Eau', 'Électricité', 'Puits'];
 
     public function client(){
         return $this->belongsTo(Client::class);

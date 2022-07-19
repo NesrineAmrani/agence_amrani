@@ -1,6 +1,6 @@
 <div class="w-full lg:w-4/6 mx-auto bg-white my-5 rounded border shadow-sm">
     <div class="flex items-center justify-between bg-gray-50">
-        @include('components.ui.title', ['title'=>'Client / Intermediaire'])
+        @include('components.ui.title', ['title'=>'Client / Intermédiaire'])
         <div class="flex items-center gap-6">
             <div class="new_client btn p-2 mr-2 text-green-400 cursor-pointer hover:text-green-600"><i class="fas fa-user-plus"></i> Nouveau</div>
             <div class="abort_new_client hidden btn p-2 mr-2 text-red-400 cursor-pointer hover:text-red-600"><i class="fas fa-ban"></i> Annuler</div>
@@ -16,9 +16,9 @@
         <label class="w-1/5 text-right text-gray-500 text-sm" for=""></label>
         <div class="relative w-3/5">
             @if(isset($intermediaire))
-               @include('components.ui.switch', ['title'=>'Intermediaire / وسيط', 'name'=>'is_intermediaire', 'checked'=>'checked']) 
+               @include('components.ui.switch', ['title'=>'Intermédiaire / وسيط', 'name'=>'is_intermediaire', 'checked'=>'checked']) 
             @else
-               @include('components.ui.switch', ['title'=>'Intermediaire / وسيط', 'name'=>'is_intermediaire', 'checked'=>'']) 
+               @include('components.ui.switch', ['title'=>'Intermédiaire / وسيط', 'name'=>'is_intermediaire', 'checked'=>'']) 
             @endif
         </div>
     </div>
@@ -43,7 +43,7 @@
     <input type="hidden" id="client_id" @if(isset($client)) value="{{$client->id}}" @else value="0" @endif name="client_id">
     <input type="hidden" id="intermediaire_id" @if(isset($intermediaire)) value="{{$intermediaire->id}}" @else value="0" @endif name="intermediaire_id">
     <div class="flex items-center block gap-4 mb-4">
-        <label class="w-1/5 text-right text-gray-500 text-sm" for="client_category_id">Category</label>
+        <label class="w-1/5 text-right text-gray-500 text-sm" for="client_category_id">Catégorie</label>
         <select disabled class="bg-gray-200 form-input w-3/5" id="client_category_id" name="client_category_id">
             @isset($intermediaire)
                 
@@ -55,7 +55,7 @@
     </div>
 
     <div class="flex items-center block gap-4 mb-4">
-        <label class="w-1/5 text-right text-gray-500 text-sm" for="client_status_id">Status du client</label>
+        <label class="w-1/5 text-right text-gray-500 text-sm" for="client_status_id">Statut du client</label>
         <select disabled class="bg-gray-200 form-input w-3/5" id="client_status_id" name="client_status_id">
         @foreach ($client_statuses as $status)
             <option value="{{$status->id}}" @if ($status->is_default) data-default="1" selected @endif>{{$status->client_status}}</option>
@@ -103,8 +103,8 @@
                 @endforeach
             @endisset
             <div class="flex gap-1 lg:gap-4 mb-4">
-                <input value="" class="form-input flex-1" type="text" name="client_contact_name[]">
-                <input value="" class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                <input value="" class="form-input flex-1" type="text" placeholder="Nom" name="client_contact_name[]">
+                <input value="" class="form-input flex-1" type="text" placeholder="Téléphone" name="client_contact_telephone[]">
                 <div class=" w-12 ">
                     <button class="add_contact w-full px-1 rounded border py-2 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                 </div>                                        
@@ -270,8 +270,8 @@
             $(this).remove();
             var content = `
             <div class="flex gap-1 lg:gap-4 mb-4">
-                <input class="form-input flex-1" type="text" name="client_contact_name[]">
-                <input class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                <input class="form-input flex-1" type="text" placeholder="Nom" name="client_contact_name[]">
+                <input class="form-input flex-1" type="text" placeholder="Téléphone" name="client_contact_telephone[]">
                 <div class=" w-12 ">
                     <button class="add_contact w-full py-2 rounded border px-1 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                 </div>

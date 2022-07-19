@@ -48,8 +48,8 @@ class Appartement extends Model
         'updated_at'
     ];
 
-    public const FACADES = ['Rue', 'Pation', 'Place', 'Piscine', 'Sur Mer', 'Vue Panoramique'];
-    public const SITUATIONS = ['Titre', 'Milikia', 'Contrat', 'Miftah', 'Contrat Adlia'];
+    public const FACADES = ['Rue', 'Patio', 'Place', 'Piscine', 'Sur Mer', 'Vue Panoramique'];
+    public const SITUATIONS = ['Titré', 'Melkia', 'Contrat', 'Miftah', 'Contrat Judiciaire'];
 
     public function client(){
         return $this->belongsTo(Client::class);

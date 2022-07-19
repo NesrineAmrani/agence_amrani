@@ -1,6 +1,6 @@
 <div class="border rounded-lg p-2 bg-white shadow mb-4 relative overflow-hidden">
     <div class="flex items-center justify-between h-12 px-4 text-gray-600">
-        <h1 class="font-bold text-lg">Total des Propriétés</h1>
+        <h1 class="font-bold text-lg">Total des Immobiliers</h1>
         <button class="text-blue-400 p-2 hover:text-gray-600 myChart_reload"><i class="fas fa-sync-alt"></i></button>
     </div>
     <canvas id="myChart"></canvas>
@@ -19,17 +19,17 @@
                 total_maisons:'Maison', 
                 total_terrains:'Terrain',
                 total_lcs:'L. Commerc.', 
-                total_villas:'Villas.', 
-                total_fermas:'Fermes'
+                total_villas:'Villa', 
+                total_fermas:'Ferme'
         };
 
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Appart.', 'Maison', 'Terrain', 'L. Commerc.', 'Villas', 'Fermes'],
+                labels: ['Appart.', 'Maison', 'Terrain', 'L. Commerc.', 'Villa', 'Ferme'],
                 datasets: [{
-                    label: '# Total des Propriétés / type',
+                    label: '# Total des Immobiliers / type',
                     data: [0, 0, 0, 0, 0, 0],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',

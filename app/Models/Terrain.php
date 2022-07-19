@@ -37,7 +37,8 @@ class Terrain extends Model
 
     public static $ETATS = ['Lotissement', 'Quartier', 'Zone Villa', 'Agricole', 'Stockage', 'Industrie'];
     public static $FACADES = ['Rue', 'Place', 'Piscine', 'Sur Mer'];
-    const SITUATIONS = ['Titré', 'Milkia', 'Contrat', 'Contrat Adlia'];
+    public const SITUATIONS = ['Titré', 'Melkia', 'Contrat', 'Contrat Judiciaire'];
+    
     public static $RECULES = ['Garage', 'RDC', 'Sous Sol', 'Mezzanine'];
 
     public function client(){

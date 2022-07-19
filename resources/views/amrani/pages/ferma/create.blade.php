@@ -1,11 +1,11 @@
 @extends('amrani.layout.app')
-@section('title') {{ __('Ajouter une Ferma') }} @endsection
+@section('title') {{ __('Ajouter une Ferme') }} @endsection
 
 @section('content')
 <div class="w-full h-full bg-gray-100">
     <div class="flex gap-4 items-center h-12 px-4 text-gray-600 bg-white">
         @include('components.ui.back')
-        <h1 class="font-bold text-xl">{{ __('Ajouter une Ferma') }} </h1>
+        <h1 class="font-bold text-xl">{{ __('Ajouter une Ferme') }} </h1>
     </div>
 
     <div class="overflow-x-auto">
@@ -24,11 +24,11 @@
 
                 <div class="w-full lg:w-4/6 mx-auto bg-white my-5 rounded border pb-4 shadow-sm">
 
-                    @include('components.ui.title', ['title'=>'Ferma / فيرمات و مزرعة'])
+                    @include('components.ui.title', ['title'=>'Ferme / فيرمات أو مزرعة'])
                     <hr>
 
                     <div class="flex items-center block gap-4 mb-4 mt-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_code">Code Ferma</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_code">Code Ferme</label>
                         <input id="ferma_code" readonly value="{{$ferma_code}}" class="form-input bg-green-100 font-bold" type="text" name="ferma_code" required>
                     </div>
 
@@ -53,9 +53,9 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_etat">Etat</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_etat">État</label>
                         <select class="form-input w-3/5" name="ferma_etat">
-                            <option value="-1">-- Etats --</option> 
+                            <option value="-1">-- États --</option> 
                             @foreach ($etats as $etat)
                                 <option value="{{$etat}}">{{$etat}}</option>    
                             @endforeach
@@ -83,9 +83,9 @@
                         </div>
                     </div>
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_facade">Facades</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_facade">Façades</label>
                         <select class="facade form-input w-3/5" name="ferma_facade">
-                            <option value="-1">-- Facade --</option> 
+                            <option value="-1">-- Façade --</option> 
                             @foreach ($facades as $facade)
                                 <option value="{{$facade}}">{{$facade}}</option>    
                             @endforeach
@@ -99,22 +99,22 @@
                     </div> 
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="activite">التجهيز</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="activite">Activité</label>
                         <input value="" class="form-input w-3/5" type="text" name="activite">
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="projet">النشاط المسموح</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="projet">Projet autorisé</label>
                         <input value="" class="form-input w-3/5" type="text" name="projet">
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_surface_total">Surface Total</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_surface_total">Surface Totale</label>
                         <input value="" placeholder="0" class="form-input" type="text" name="ferma_surface_total">
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_surface_batie">Surface Batie</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="ferma_surface_batie">Surface Bâtie</label>
                         <input value="" placeholder="0" class="form-input" type="text" name="ferma_surface_batie">
                     </div>
 
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="nbr_etages">Nbr. Etages</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="nbr_etages">Nbr. Étages</label>
                         <input value="" placeholder="0" class="form-input" type="text" name="nbr_etages">
                     </div>
 
@@ -141,7 +141,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Declare</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Déclaré</label>
                         <input value="" placeholder="0" class="form-input bg-blue-50" type="number" name="prix_declaration">
                         <span class="text-xs text-gray-500">DH</span>
                     </div>

@@ -55,9 +55,9 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_etat">Etat</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_etat">État</label>
                         <select class="form-input w-3/5" name="terrain_etat">
-                            <option value="-1">-- Etats --</option> 
+                            <option value="-1">-- États --</option> 
                             @foreach ($etats as $etat)
                                 <option @if($etat == $terrain->terrain_etat) selected @endif value="{{$etat}}">{{$etat}}</option>    
                             @endforeach
@@ -97,9 +97,9 @@
                         </select>
                     </div>
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_situation">Facades</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_situation">Façades</label>
                         <select class="facade form-input w-3/5" name="terrain_facade">
-                            <option value="-1">-- Facade --</option> 
+                            <option value="-1">-- Façade --</option> 
                             @foreach ($facades as $facade)
                                 <option @if($facade == $terrain->terrain_facade) selected @endif value="{{$facade}}">{{$facade}}</option>    
                             @endforeach
@@ -118,7 +118,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_etage">Nbr. Etage</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="terrain_etage">Nbr. Étages</label>
                         <input value="{{$terrain->terrain_etage}}" placeholder="0" class="form-input" type="text" name="terrain_etage">
                     </div>
 
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Declare</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Déclaré</label>
                         <input value="{{$terrain->prix_declaration}}"placeholder="0" class="form-input bg-blue-50" type="number" name="prix_declaration">
                         <span class="text-xs text-gray-500">DH</span>
                     </div>

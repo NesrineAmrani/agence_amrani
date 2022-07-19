@@ -1,5 +1,5 @@
 <div class="flex items-center gap-4">
-    <select class="form-input w-32" id="city_id" name="city_id">
+    <select class="form-input w-48" id="city_id" name="city_id">
         <option value="-1">--Ville</option>
         @foreach ($cities as $city)
             @if (isset($city_id))
@@ -9,9 +9,9 @@
             @endif
         @endforeach
     </select>
-    <div class="relative w-32">
+    <div class="relative w-56">
         <select class="form-input w-full" id="city_sector_id" name="city_sector_id">
-            <option value="-1">--Sector</option>
+            <option value="-1">--Secteur</option>
         </select>
         <div class="loader absolute top-0 right-0 bottom-0 bg-gray-600 bg-opacity-10 z-10 w-full rounded-lg">
             <i class="fas fa-sync fa-spin mt-2 ml-24"></i>
@@ -28,7 +28,7 @@
                 $('#city_sector_id').find('option')
                                         .remove()
                                         .end()
-                                        .append('<option value="-1">--Sector</option>')
+                                        .append('<option value="-1">--Secteur</option>')
                                         .val(-1);
                 $('.loader').addClass('hidden');
             }else{
@@ -47,7 +47,7 @@
                         $('#city_sector_id').find('option')
                                         .remove()
                                         .end()
-                                        .append('<option value="-1">--Sector</option>')
+                                        .append('<option value="-1">--Secteur</option>')
                                         .val(-1);
 
                         for (const key in response) {

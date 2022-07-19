@@ -30,8 +30,8 @@ class DatabaseSeeder extends Seeder
             FermaServiceSeeder::class,
 
         ]);
-        \App\Models\Client::factory(414)->create();
-        \App\Models\Intermediaire::factory(365)->create();
+        \App\Models\Client::factory(40)->create();
+        \App\Models\Intermediaire::factory(36)->create();
         // $this->call(CityTableSeeder::class);
         // $this->call(CitySectorTableSeeder::class);
         $this->call(CitiesTableSeeder::class);

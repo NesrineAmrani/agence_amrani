@@ -1,7 +1,7 @@
 <div class="vertical_menu flex flex-col justify-between min-w-48 w-48 h-full bg-gradient-to-r from-gray-100 to-gray-200 border-r border-gray-300 pb-4 overflow-y-auto" style="min-width: 185px">
     <div class="">
         <div class="flex items-center border-b border-gray-300 px-4 h-14 mb-2">
-            <!-- http://adminmart.com/src/assets/images/logo-icon.png -->
+            
             <img class="w-10 h-8 mr-1" src="/images/logo.png" alt="logo">
             <div class="text-gray-100 text-sm text-gray-800">
                 <span class="font-bold">Agence</span> 
@@ -60,8 +60,9 @@
                    </small>
                 </a>
                 <a href="{{ route('terrain.index') }}" 
-                    class="flex items-center block py-2 px-3 text-sm 
-                    @if(Route::currentRouteNamed( 'terrain.index' )) 
+                    class="flex items-center block py-2 px-3 text-sm
+                    @if( Str::contains(Route::currentRouteName(), 'terrain') )  
+                    
                         bg-gray-600 rounded-r-full text-gray-100 pointer-events-none
                     @else 
                         hover:bg-gray-300 cursor-pointer hover:text-gray-800 text-gray-600 @endif "
@@ -74,33 +75,36 @@
                 </a>
                 <a href="{{ route('maison.index') }}" 
                     class="flex items-center block py-2 px-3 text-sm 
-                    @if(Route::currentRouteNamed( 'maison.index' )) 
+                    @if( Str::contains(Route::currentRouteName(), 'maison') )  
+                    
                         bg-gray-600 rounded-r-full text-gray-100 pointer-events-none
                     @else 
                         hover:bg-gray-300 cursor-pointer hover:text-gray-800 text-gray-600 @endif "
                 >                                
                     <div class="w-6"><i class="fas fa-home"></i> </div>
-                     Maison 
+                     Maisons 
                      <small class="ml-2 text-xs font-bold total_maisons">
                         <i class="fas fa-sync fa-spin"></i>
                     </small>
                 </a>
                 <a href="{{ route('lc.index') }}" 
                     class="flex items-center block py-2 px-3 text-sm 
-                    @if(Route::currentRouteNamed( 'lc.index' )) 
+                    @if( Str::contains(Route::currentRouteName(), 'lc') )
+                    
                         bg-gray-600 rounded-r-full text-gray-100 pointer-events-none
                     @else 
                         hover:bg-gray-300 cursor-pointer hover:text-gray-800 text-gray-600 @endif "
                 >                                 
                     <div class="w-6"><i class="fas fa-warehouse"></i> </div>
-                     Local Commercial
+                     <div class="ml-1">Locaux Commerciaux</div>
                      <small class="ml-2 text-xs font-bold total_lcs">
                         <i class="fas fa-sync fa-spin"></i>
                      </small>
                 </a>
                 <a href="{{ route('villa.index') }}" 
                     class="flex items-center block py-2 px-3 text-sm 
-                    @if(Route::currentRouteNamed( 'villa.index' )) 
+                    @if( Str::contains(Route::currentRouteName(), 'villa') )
+                    
                         bg-gray-600 rounded-r-full text-gray-100 pointer-events-none
                     @else 
                         hover:bg-gray-300 cursor-pointer hover:text-gray-800 text-gray-600 @endif "
@@ -113,7 +117,8 @@
                 </a>
                 <a href="{{ route('ferma.index') }}" 
                     class="flex items-center block py-2 px-3 text-sm 
-                    @if(Route::currentRouteNamed( 'ferma.index' )) 
+                    @if( Str::contains(Route::currentRouteName(), 'ferma') )
+                   
                         bg-gray-600 rounded-r-full text-gray-100 pointer-events-none
                     @else 
                         hover:bg-gray-300 cursor-pointer hover:text-gray-800 text-gray-600 @endif "

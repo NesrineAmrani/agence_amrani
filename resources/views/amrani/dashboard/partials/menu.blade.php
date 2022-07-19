@@ -4,8 +4,8 @@
         ['Terrain', '<i class="fas fa-map-marked text-2xl block"></i>', 'terrain.create'],
         ['Maison', '<i class="fas fas fa-home text-2xl block"></i>', 'maison.create'],
         ['L. Commercial', '<i class="fas fa-warehouse text-2xl block"></i>', 'lc.create'],
-        ['Villas', '<i class="fas fas fa-home text-2xl block"></i>', 'villa.create'],
-        ['Fermes', '<i class="fas fa-horse-head text-2xl block"></i>', 'ferma.create']
+        ['Villa', '<i class="fas fas fa-home text-2xl block"></i>', 'villa.create'],
+        ['Ferme', '<i class="fas fa-horse-head text-2xl block"></i>', 'ferma.create']
     ]
 @endphp
 

@@ -55,9 +55,9 @@
                     </div>
                     
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_etat">Etat</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_etat">État</label>
                         <select class="form-input w-3/5" name="appartement_etat">
-                            <option value="-1">-- Etats --</option> 
+                            <option value="-1">-- États --</option> 
                             @foreach ($etats as $etat)
                                 <option @if($etat == $appartement->appartement_etat) selected @endif value="{{$etat}}">{{$etat}}</option>    
                             @endforeach
@@ -82,9 +82,9 @@
                         </select>
                     </div>
                     <div class="flex items-center block gap-4 mb-4 flex-1">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_facade">Facades</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_facade">Façades</label>
                         <select class="form-input w-3/5" name="appartement_facade" id="appartement_facade">
-                            <option value="-1">-- Facade --</option> 
+                            <option value="-1">-- Façade --</option> 
                             @foreach ($facades as $facade)
                                 <option @if($facade == $appartement->appartement_facade) selected @endif value="{{$facade}}">{{$facade}}</option>    
                             @endforeach
@@ -97,19 +97,19 @@
                         <input value="{{$appartement->largeur_3}}" placeholder="0" class="form-input w-16 text-center" type="text" name="largeur_3">
                     </div> 
                     <div class="facade @if($appartement->appartement_facade != 'Vue Panoramique') hidden @endif  flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="facade_details">Details</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="facade_details">Détails</label>
                         <input value="{{$appartement->facade_details}}" class="form-input w-3/5" type="text" name="facade_details">
                     </div> 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_etage">Etage</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartement_etage">Étage</label>
                         <input value="{{$appartement->appartement_etage}}" placeholder="0" class="form-input" type="text" name="appartement_etage">
                     </div>
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartements_en_etage">App. / Etage</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartements_en_etage">App. / Étage</label>
                         <input value="{{$appartement->appartements_en_etage}}" placeholder="0" class="form-input" type="number" name="appartements_en_etage">
                     </div>
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartements_en_immeuble">App. / immeuble</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="appartements_en_immeuble">App. / Immeuble</label>
                         <input value="{{$appartement->appartements_en_immeuble}}" placeholder="0" class="form-input" type="number" name="appartements_en_immeuble">
                     </div>
                     <div class="flex items-center block gap-4 mb-4">
@@ -169,7 +169,7 @@
                     </div>
 
                     <div class="flex items-center block gap-4 mb-4">
-                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Declare</label>
+                        <label class="w-1/5 text-right text-gray-500 text-sm" for="prix_declaration">Prix Déclaré</label>
                         <input value="{{$appartement->prix_declaration}}"placeholder="0" class="form-input bg-blue-50" type="number" name="prix_declaration">
                         <span class="text-xs text-gray-500">DH</span>
                     </div>

@@ -40,9 +40,9 @@ class Maison extends Model
         'updated_at'
     ];
     public const ETATS = ['Nouveau', 'Déjà Utilisé'];
-    public const FACADES = ['Rue', 'Kisaria', 'Place', 'Souk'];
-    public const SITUATIONS = ['Titre', 'Milikia', 'Contrat', 'Miftah', 'Contrat Adlia'];
-    public const DETAILS = ['Soudda', 'Sous Sol', 'Garage', 'Mezzanine'];
+    public const FACADES = ['Rue', 'Centre Commercial', 'Place', 'Marché', 'Sur Mer'];
+    public const SITUATIONS = ['Titré', 'Melkia', 'Contrat', 'Miftah', 'Contrat Judiciaire'];
+    public const DETAILS = ['RDC', 'Sous Sol', 'Garage', 'Mezzanine'];
 
     public function client(){
         return $this->belongsTo(Client::class);

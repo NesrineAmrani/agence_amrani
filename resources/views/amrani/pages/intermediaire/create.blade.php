@@ -1,11 +1,11 @@
 @extends('amrani.layout.app')
-@section('title') {{ __('Ajouter un Intermediaire') }} @endsection
+@section('title') {{ __('Ajouter un Intermédiaire') }} @endsection
 
 @section('content')
     <div class="w-full h-full bg-gray-100">
         <div class="flex gap-4 items-center h-12 px-4 text-gray-600 bg-white">
             @include('components.ui.back')
-            <h1 class="font-bold text-xl">{{ __('Ajouter un Intermediaire') }} </h1>
+            <h1 class="font-bold text-xl">{{ __('Ajouter un Intermédiaire') }} </h1>
         </div>
 
         <div class="overflow-x-auto">
@@ -14,17 +14,17 @@
                     <form class="m-0" action="{{route('intermediaire.store')}}" method="POST">
                         @csrf
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_code">Code Intermediaire</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_code">Code Intermédiaire</label>
                             <input readonly value="{{$code_intermediaire}}" class="form-input bg-green-100 font-bold" type="text" id="intermediaire_code" name="intermediaire_code" required>
                         </div>
                         
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire">Nom Intermediaire</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire">Nom Intermédiaire</label>
                             <input class="form-input w-3/5" type="text" id="intermediaire" name="intermediaire_name" required>
                         </div>
 
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediairecategory_id">Category</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediairecategory_id">Catégorie</label>
                             <select class="form-input w-3/5" id="intermediaire_category_id" name="intermediaire_category_id" required>
                             @foreach ($categories as $category)
                                 <option value="{{$category->id}}" @if ($category->is_default) selected @endif>{{$category->intermediaire_category}}</option>
@@ -33,7 +33,7 @@
                         </div>
 
                         <div class="flex items-center block gap-4 mb-4">
-                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_status_id">Status</label>
+                            <label class="w-1/5 text-right text-gray-500 text-sm" for="intermediaire_status_id">Statut</label>
                             <select class="form-input w-3/5" id="intermediaire_status_id" name="intermediaire_status_id" required>
                             @foreach ($statuses as $status)
                                 <option value="{{$status->id}}" @if ($status->is_default) selected @endif>{{$status->intermediaire_status}}</option>
@@ -55,8 +55,8 @@
                             <label class="w-1/5 text-right text-gray-500 text-sm pt-1" for="client_contacts">Contacts</label>
                             <div class="contacts w-3/5 ">
                                 <div class="flex gap-1 lg:gap-4 mb-4">
-                                    <input class="form-input flex-1" type="text" name="client_contact_name[]">
-                                    <input class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                                    <input class="form-input flex-1" type="text" placeholder="Nom" name="client_contact_name[]">
+                                    <input class="form-input flex-1" type="text" placeholder="Téléphone" name="client_contact_telephone[]">
                                     <div class=" w-12 ">
                                         <button class="add_contact w-full py-2 rounded border px-1 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                                     </div>
@@ -83,8 +83,8 @@
                 $(this).remove();
                 var content = `
                 <div class="flex gap-1 lg:gap-4 mb-4">
-                    <input class="form-input flex-1" type="text" name="client_contact_name[]">
-                    <input class="form-input flex-1" type="text" name="client_contact_telephone[]">
+                    <input class="form-input flex-1" type="text" placeholder="Nom" name="client_contact_name[]">
+                    <input class="form-input flex-1" type="text" placeholder="Téléphone" name="client_contact_telephone[]">
                     <div class=" w-12 ">
                         <button class="add_contact w-full py-2 rounded border px-1 rounded-lg bg-blue-400 hover:bg-gray-400 text-white text-sm"><i class="fas fa-user-plus"></i></button>
                     </div>

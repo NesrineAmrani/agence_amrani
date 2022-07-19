@@ -46,7 +46,7 @@
             <form class="pt-1 " action="{{route('terrain.destroy', $terrain->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="destroy_terrain w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                <button class="destroy_terrain w-4 mr-2 transform hover:text-red-500 hover:scale-110">
                     @include('amrani.pages.terrain.partials.btn-delete')
                 </button>
             </form>
